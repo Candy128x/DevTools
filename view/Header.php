@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>DevTools</title>
 
@@ -49,6 +49,10 @@ a, a:hover{
 	padding: 10px;
 }
 
+.margin5px{
+	margin: 5px;
+}
+
 </style>
 <script>
 
@@ -67,24 +71,22 @@ a, a:hover{
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-      <a class="navbar-brand" href="#">CodeMagic</a>
+      <a class="navbar-brand" href="#">DevTools</a>
     </div>
 	<div class="collapse navbar-collapse" id="myNavbar">
 	<ul class="nav navbar-nav">
-      <li class="active"><a href="<?php echo $projPath.'/view/indexNew.php'; ?>">Home</a></li>
-      <li><a href="<?php echo $projPath.'/view/DummyPage.php'; ?>">Insert</a></li>
-      <li><a href="<?php echo $projPath.'/view/formUpdate.php'; ?>">Update</a></li>
+      <li class="active"><a href="<?php echo $projPath.'/view/indexHome.php'; ?>">Home</a></li>
+      <li><a href="#">Insert</a></li>
+      <li><a href="#">Update</a></li>
       <li><a href="#">Select</a></li>
-      <li><a href="<?php echo $projPath.'/view/formDelete.php'; ?>">Delete</a></li>
+      <li><a href="#">Delete</a></li>
+      <li><a href="<?php echo $projPath."/view/TestPage.php"; ?>">TestPage</a></li>
 	  <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">More
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-		  <li><a href="<?php echo $projPath.'/view/jQuery-Basic.php'; ?>">DateGMTtoIST</a></li>
-		  <li><a href="<?php echo $projPath.'/view/formPaginate3.php'; ?>" title='fixed-PrettyGood'>Paginate3</a></li>
-          <li><a href="<?php echo $projPath.'/view/PageMPDF.php'; ?>">mpdf</a></li>
-          <li><a href="<?php echo $projPath.'/view/PageInfiniteScroll.php'; ?>">InfiniteScroll</a></li>
-		  <li><a href="<?php echo $projPath.'/view/PageCustAddress.php'; ?>">CustAddress</a></li>
+			<li><a href="<?php echo $projPath.'/view/DummyPage.php'; ?>" title='Demo-DummyPage'>DummyPage</a></li>
+		  	<li><a href="<?php echo $projPath.'/view/DateGMTtoIST.php'; ?>">DateGMTtoIST</a></li>
         </ul>
       </li>
     </ul>
