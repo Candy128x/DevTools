@@ -1,7 +1,3 @@
-<?php
-include_once('Header.php');
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,9 +18,3 @@ include_once('Header.php');
 
 </body>
 </html>
-
-
-<?php
-//session_unset();
-include_once('Footer.php');
-?>
