@@ -50,7 +50,7 @@ body{
 	<div class="form-horizontal margin5px">
       <label class="control-label width150" for="currGmtDate">Current GMT date:</label>
       <input type="text" class="form-control"
-        value="<?php date_default_timezone_set('Asia/Kolkata'); $time_now=mktime(date('H')-5,date('i')-30,date('s')); echo date('Y-m-d H:i:s', $time_now); ?>"
+        value="<?php date_default_timezone_set('Asia/Kolkata'); $time_now=mktime(date('h')-5,date('i')-30,date('s')); echo date('Y-m-d H:i:s', $time_now); ?>"
         id="currGmtDate" size="50">
     </div>
 	
@@ -72,6 +72,17 @@ body{
    <input type="text" class="form-control" name="istDate">
  </div>
  
+ <div class="form-horizontal margin5px">
+   <label class="control-label width150" for="strtotime">Date To strtotime:</label>
+   <input type="text" class="form-control" name="strtotime">
+ </div>
+ 
+  <div class="form-horizontal margin5px">
+   <label class="control-label width150" for="strtotimeToDate">strtotime To Date:</label>
+   <input type="text" class="form-control" name="strtotimeToDate">
+ </div>
+ 
+ 
  <button type="submit" class="btn btn-success margin5px">Submit</button>
  <input type="reset" class="btn btn-danger" name="" value="Reset"><br>
 
@@ -80,12 +91,22 @@ body{
 
 <?php
 
+echo '<br>';
+
 if(!empty($_POST["gmtDate"])){
 echo "GMT to IST: " . date("Y-m-d H:i:s", strtotime("+330 minutes", strtotime($_POST["gmtDate"])));
 }
 
 if(!empty($_POST["istDate"])){
 echo "IST to GMT: " . date("Y-m-d H:i:s", strtotime("-330 minutes", strtotime($_POST["istDate"])));
+}
+
+if(!empty($_POST["strtotime"])){
+echo "Date To strtotime: " . strtotime($_POST["strtotime"]);
+}
+
+if(!empty($_POST["strtotimeToDate"])){
+echo "strtotime To Date: " . date("Y-m-d H:i:s", $_POST["strtotimeToDate"]);
 }
 
 ?>
