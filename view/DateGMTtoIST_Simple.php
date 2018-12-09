@@ -50,7 +50,7 @@ body{
 	<div class="form-horizontal margin5px">
       <label class="control-label width150" for="currGmtDate">Current GMT date:</label>
       <input type="text" class="form-control"
-        value="<?php date_default_timezone_set('Asia/Kolkata'); $time_now=mktime(date('h')-5,date('i')-30,date('s')); echo date('Y-m-d H:i:s', $time_now); ?>"
+        value="<?php date_default_timezone_set('Asia/Kolkata'); $time_now=mktime(date('H')-5,date('i')-30,date('s')); echo date('Y-m-d H:i:s', $time_now); ?>"
         id="currGmtDate" size="50">
     </div>
 	
